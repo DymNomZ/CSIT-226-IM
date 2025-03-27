@@ -1,0 +1,70 @@
+body {
+    background-color: #1e2533;
+    font-family: 'Hagrid', sans-serif;
+    background-image: url('sari_sari.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+div {
+    background-color: rgba(44, 52, 70, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    color: antiquewhite;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    color: antiquewhite;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+th {
+    background-color: #3a4254;
+    color: antiquewhite;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button {
+    background-color: antiquewhite;
+    border: 2px solid antiquewhite;
+    border-radius: 5px;
+    color: #343F56;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button a {
+    text-decoration: none;
+    color: #343F56;
+}
+
+button:hover {
+    background-color: #4a5670;
+    color: antiquewhite;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

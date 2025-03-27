@@ -1,0 +1,187 @@
+header {
+    background-color: #343F56;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    color: antiquewhite;
+    font-family: 'Hagrid', sans-serif;
+}
+
+header img {
+    max-height: 60px;
+    margin-right: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+hr {
+    border: 3px solid antiquewhite;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #1e2533;
+    font-family: 'Hagrid', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('sari_sari.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+footer {
+    background-color: #343F56;
+    color: antiquewhite;
+    text-align: center;
+    padding: 10px 0;
+}
+
+p {
+    padding: 20px;
+    color: antiquewhite;
+}
+
+@font-face {
+    font-family: 'Hagrid';
+    src: url('fonts/Hagrid-Regular-trial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main-content-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.about-section {
+    width: 60%;
+    padding-left: 30px;
+    padding-right: 20px;
+    font-size: 17px;
+}
+
+.about-section h1 {
+    font-family: 'Hagrid', sans-serif;
+    color: antiquewhite;
+    font-size: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10%;
+}
+
+.about-section p {
+    margin-bottom: 10%;
+}
+
+.about-section h2 {
+    font-family: 'Hagrid', sans-serif;
+    color: antiquewhite;
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.about-images {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.about-images img {
+    max-width: 75px;
+    max-height: 75px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding-left: 20px;
+    object-fit: contain;
+}
+
+.about-section hr {
+    border: 1px solid antiquewhite;
+    width: 100%;
+    margin-top: 25px;
+    padding-left: 30px;
+}
+
+.about-section h3 {
+    color: antiquewhite;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.login-modal {
+    background-color: #2c3446;
+    color: white;
+    padding: 20px;
+    width: 30%;
+    margin-left: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-modal a {
+    color: #343F56;
+    text-decoration: none;
+}
+
+.login-modal a:hover {
+    background-color: #4a5670;
+    color: antiquewhite;
+}
+
+.login-modal h2 {
+    color: antiquewhite;
+    margin-top: 0;
+    text-align: center;
+    font-size: 35px;
+}
+
+.login-modal input {
+    width: 60%;
+    margin: 10px 0;
+    padding: 8px;
+    box-sizing: border-box;
+    display: block;
+    background-color: transparent;
+    border: 2px solid antiquewhite;
+    border-radius: 5px;
+    color: antiquewhite;
+    font-size: 15px;
+}
+
+.login-modal input::placeholder {
+    color: antiquewhite;
+}
+
+.login-modal button {
+    width: 40%;
+    margin: 10px 0;
+    padding: 8px;
+    box-sizing: border-box;
+    display: block;
+    background-color: antiquewhite;
+    border: 2px solid antiquewhite;
+    border-radius: 5px;
+    color: antiquewhite;
+    cursor: pointer;
+    font-size: 15px;
+    color: #343F56;
+    font-weight: bold;
+}
+
+.login-modal button:hover {
+    background-color: #4a5670;
+    color: antiquewhite;
+}
