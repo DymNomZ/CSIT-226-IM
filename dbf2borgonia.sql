@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2025 at 06:33 AM
+-- Generation Time: Apr 10, 2025 at 08:27 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -51,9 +51,26 @@ CREATE TABLE `tblproduct` (
   `manufacturer` varchar(100) DEFAULT NULL,
   `category` varchar(50) DEFAULT NULL,
   `expiration_date` date DEFAULT NULL,
-  `number_sold` int(11) DEFAULT 0,
-  `isActive` tinyint(1) DEFAULT 1
+  `isActive` tinyint(1) DEFAULT 1,
+  `product_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tblproduct`
+--
+
+INSERT INTO `tblproduct` (`product_id`, `store_id`, `quantity_in_stock`, `measurement`, `bought_price`, `selling_price`, `manufacturer`, `category`, `expiration_date`, `isActive`, `product_name`) VALUES
+(1, NULL, 14, '1L', '5.00', '15.00', 'Coca-Cola Company', 'Snacks', '2025-04-14', 1, 'Sprite'),
+(2, NULL, 100, '500ml', '0.30', '0.75', 'Coca-Cola Co.', 'Beverages', '2025-12-31', 1, 'Coke Classic'),
+(3, NULL, 200, '150g', '0.40', '1.00', 'PepsiCo', 'Snacks', '2025-08-15', 1, 'Lays Chips'),
+(4, NULL, 50, '250ml', '2.00', '4.50', 'Procter & Gamble', 'Hygiene', '2026-01-01', 1, 'Head & Shoulders Shampoo'),
+(5, NULL, 300, '100g', '0.50', '1.20', 'Unilever', 'Hygiene', '2026-05-20', 1, 'Dove Soap'),
+(6, NULL, 80, '100g', '1.50', '3.00', 'Nestle', 'Beverages', '2025-10-10', 1, 'Nescafe Instant Coffee'),
+(7, NULL, 150, '200g', '0.70', '1.80', 'Mondelez', 'Snacks', '2025-09-05', 1, 'Oreo Cookies'),
+(8, NULL, 120, '75ml', '0.90', '2.20', 'Colgate-Palmolive', 'Hygiene', '2026-03-15', 1, 'Colgate Toothpaste'),
+(9, NULL, 90, '1L', '0.60', '1.50', 'Danone', 'Beverages', '2025-11-30', 1, 'Evian Water'),
+(10, NULL, 60, '42g', '0.30', '1.00', 'General Mills', 'Snacks', '2025-07-01', 1, 'Nature Valley Bar'),
+(11, NULL, 70, '500ml', '1.80', '3.90', 'Johnson & Johnson', 'Hygiene', '2026-04-22', 1, 'Listerine Mouthwash');
 
 -- --------------------------------------------------------
 
@@ -156,7 +173,7 @@ ALTER TABLE `tblemployee`
 -- AUTO_INCREMENT for table `tblproduct`
 --
 ALTER TABLE `tblproduct`
-  MODIFY `product_id` bigint(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `product_id` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tblstore`

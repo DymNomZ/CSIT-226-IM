@@ -1,6 +1,6 @@
 <?php    
     include 'connect.php';
-    include 'readrecords.php';   
+    include 'queries.php';   
     //require_once 'includes/header.php'; 
 ?>
 
@@ -12,34 +12,67 @@
     including small stores, efficiently track and manage their inventory.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style_dashboard.css"> 
+    <script>
+    function confirmDelete(id) {
+        const confirmAction = confirm("Are you sure you want to delete this product?");
+        if (confirmAction) {
+            window.location.href = "delete.php?id=" + id;
+        }
+        return false; // prevent default button behavior
+    }
+    </script>
 </head>
 <body>   
 
     <br>
     <div>
-    <h2>List of Students</h2>
-        <table id="tblCustomerRecords " class="table
+    <h2>List of Products</h2>
+    <h3>Number of products: <?php echo $totalProducts; ?></h3>
+        <table id="tblProductRecords " class="table
             table-striped table-bordered table-sm" cellspacing="0" width="100%"> 
             <thead>
                 <tr> 
-                    <th>ID Number</th> 
-                    <th>Firstname</th> 
-                    <th>Lastname</th>
-                    <th>Program</th>                     
-                    <th>Action</th>
+                    <th>Product ID</th> 
+                    <th>Store ID</th>
+                    <th>Manufacturer</th> 
+                    <th>Name</th> 
+                    <th>Quantity in Stock</th>
+                    <th>Measurement</th>                     
+                    <th>Bought Price</th>
+                    <th>Selling Price</th> 
+                    <th>Category</th>
+                    <th>Expiration Date</th>                     
+                    <th>Is Active</th>
                 </tr> 
             </thead>  
             <tbody>
                 <?php
                     while($row = $resultset->fetch_assoc()):
-                    	$id = $row['uid'];
+                    	$product_id = $row['product_id'];
+                        $store_id = $row['store_id'];
+                        $manufacturer = $row['manufacturer'];
+                        $product_name = $row['product_name'];
+                        $quantity_in_stock = $row['quantity_in_stock'];
+                        $measurement = $row['measurement'];
+                        $bought_price = $row['bought_price'];
+                        $selling_price = $row['selling_price'];
+                        $category = $row['category'];
+                        $expiration_date = $row['expiration_date'];
+                        $isActive = $row['isActive'];
                 ?>
                 <tr>
-                    <td><?php echo $id ?></td>
-                    <td><?php echo $row['firstname'] ?></td>
-                    <td><?php echo $row['lastname'] ?></td>
-                    <td><?php echo $row['program'] ?></td> 
-                    <td><button><a href="update.php">UPDATE</a></button> | <button><a href="delete.php">DELETE</a></button></td>
+                    <td><?php echo $product_id ?></td>
+                    <td><?php echo $store_id ?></td>
+                    <td><?php echo $manufacturer ?></td>
+                    <td><?php echo $product_name ?></td>
+                    <td><?php echo $quantity_in_stock ?></td>
+                    <td><?php echo $measurement ?></td> 
+                    <td><?php echo $bought_price ?></td>
+                    <td><?php echo $selling_price ?></td>
+                    <td><?php echo $category ?></td> 
+                    <td><?php echo $expiration_date ?></td>
+                    <td><?php echo $isActive ?></td>
+                    <td><button><a href="update_product.php?id=<?php echo $product_id ?>">UPDATE</a></button> | <button onclick="return confirmDelete(<?php echo $product_id; ?>)">DELETE</button>
                 </tr>
                 <?php endwhile;?>
             </tbody>         
@@ -47,7 +80,7 @@
     </div>
 
     <div class="button-container">
-        <button><a href="addrecord.php">Add New Student</a></button>
+        <button><a href="add_product.php">Add Product</a></button>
         <button><a href="index.php">Logout</a></button>
     </div>
 

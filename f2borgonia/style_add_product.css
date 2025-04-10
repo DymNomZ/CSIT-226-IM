@@ -1,0 +1,73 @@
+body {
+    background-color: #1e2533;
+    font-family: 'Hagrid', sans-serif;
+    background-image: url('sari_sari.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+div {
+    background-color: rgba(44, 52, 70, 0.8);
+    border-radius: 20px;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+div > form > div{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select {
+    margin: 5px 0;
+    margin-bottom: 5%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 400px;
+    box-sizing: border-box;
+    background-color: #3a4254;
+    color: antiquewhite;
+    align-self: center;
+}
+
+input[type="submit"] {
+    width: 40%;
+    margin: 10px 0;
+    padding: 8px;
+    box-sizing: border-box;
+    display: block;
+    background-color: antiquewhite;
+    border: 2px solid antiquewhite;
+    border-radius: 5px;
+    color: #343F56;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    align-self: center
+}
+
+input[type="submit"]:hover {
+    background-color: #4a5670;
+    color: antiquewhite;
+}

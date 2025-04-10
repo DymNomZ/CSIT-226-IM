@@ -40,6 +40,9 @@
             <button>
                 <a href="register.php">Register</a>
             </button>
+            <button>
+                <a href="dashboard.php">Dashboard</a>
+            </button>
         </div>
     </div>
 
